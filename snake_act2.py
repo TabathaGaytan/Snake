@@ -33,6 +33,17 @@ def move():
         food.y = randrange(-15, 15) * 10
     else:
         snake.pop(0)
+         if food.x <=-30 and food.y <=-30:
+            f=vector(randrange(0,15,10),randrange(0,15,10))
+        elif food.x <=-30 and food.y >=-30:
+            f=vector(randrange(0,15,10),randrange(0,15,10))
+        elif food.x >=-30 and food.y >=-30:
+            f=vector(randrange(0,15,10),randrange(0,15,10))
+        else:
+             f=vector(randrange(0,15,10),randrange(0,15,10))
+        
+        food.move(f)
+
 
     clear()
 
